@@ -15,6 +15,8 @@ const last = function(str, n = 1) {
 const removeChar = function(str, target) {
   // hint: use _.reject
   // Your code goes here
+  const arr = str.split('');
+  return _.reject(arr, letter => letter === target).join('');
 };
 
 const hasChar = function(str, target) {
