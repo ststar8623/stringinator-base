@@ -71,11 +71,11 @@ const pluck = function(obj, key){
 // is not given, the first element of the collection is used as the initial
 // value. The callback is invoked with four arguments:
 // (accumulator, value, index|key, collection).
-const reduce = function(obj, callback=identity, initialValue){
-  const accumulator = initialValue;
-  const initializing = accumulator === undefined;
-  each(obj, (currentValue, currentIndexOrKey, iteratedObj)=>{
-    if(initializing){
+const reduce = function(obj, callback=identity, initialValue) {
+  let accumulator = initialValue;
+  let initializing = accumulator === undefined;
+  each(obj, (currentValue, currentIndexOrKey, iteratedObj)  => {
+    if (initializing) {
       initializing = false;
       accumulator = currentValue;
     } else {
