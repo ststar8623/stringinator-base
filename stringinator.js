@@ -28,6 +28,8 @@ const hasChar = function(str, target) {
 
 const isOnlyDigits = function(str) {
   // Your code goes here
+  const arr = str.split('');
+  return _.every(arr, char => char.charCodeAt(0) >= 48 && char.charCodeAt(0) <= 57);
 };
 
 const filterToOnlyDigits = function(str) {
