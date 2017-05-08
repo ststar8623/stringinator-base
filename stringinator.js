@@ -34,6 +34,8 @@ const isOnlyDigits = function(str) {
 
 const filterToOnlyDigits = function(str) {
   // Your code goes here
+  const arr = str.split('');
+  return _.filter(arr, num => Number(num)).join('');
 };
 
 const truncateString = function(val, maxLength) {
