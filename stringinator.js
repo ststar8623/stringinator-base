@@ -46,6 +46,11 @@ const truncateString = function(val, maxLength) {
 const truncateLongItems = function(obj, maxLength) {
   // hint: use truncateString above
   // Your code goes here
+  const result = [];
+  for(let key in obj){
+    result.push(truncateString(obj[key], maxLength));
+  };
+  return result;
 };
 
 const countChars = function(str) {
