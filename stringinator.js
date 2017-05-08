@@ -6,8 +6,10 @@ const first = function(str, n = 1) {
   return n === 1 ? arr[0] : arr.splice(0, n).join('');
 };
 
-const last = function(str, n) {
+const last = function(str, n = 1) {
   // Your code goes here
+  const arr = str.split('');
+  return n === 1 ? arr[arr.length -1] : arr.splice(Math.max(0, arr.length - n)).join('');
 };
 
 const removeChar = function(str, target) {

@@ -3,7 +3,7 @@ const _ = require('../../underbar');
 describe('first()', () => {
   it('returns the first element of an array', () => {
     // Your code goes here
-    expect(_.first([1, 2, 3])).toEqual([1]);
+    expect(_.first([1, 2, 3])).toEqual(1);
   });
 
   it('returns the first 2 elements of an array', () => {
