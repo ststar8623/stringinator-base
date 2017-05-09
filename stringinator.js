@@ -66,8 +66,7 @@ const countChars = function(str) {
 
 const dedup = function(str) {
   // Your code goes here
-  const arr = str.split('');
-  return _.uniq(arr).join('');
+  return _.uniq(str).join('');
 };
 
 module.exports = {
