@@ -55,12 +55,8 @@ const countChars = function(str) {
   // Your code goes here
   const arr = str.split('');
   return _.reduce(str, (obj, currentValue)=>{
-    if(obj[currentValue] === undefined){
-      obj[currentValue] = 1;
-    } else {
-      obj[currentValue]++;
-    }
-    return obj;
+    obj[currentValue] === undefined ? obj[currentValue] = 1 : obj[currentValue]++;
+    return obj
   }, {});
 };
 
