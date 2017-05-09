@@ -56,9 +56,14 @@ const truncateLongItems = function(obj, maxLength) {
 const countChars = function(str) {
   // Your code goes here
   const arr = str.split('');
-  const result = {};
-  _.each(arr, nums => result.hasOwnProperty(nums) ? result[nums]++ : result[nums] = 1);
-  return result;
+  return _.reduce(str, (obj, currentValue)=>{
+    if(obj[currentValue] === undefined){
+      obj[currentValue] = 1;
+    } else {
+      obj[currentValue]++;
+    }
+    return obj;
+  }, {});
 };
 
 const dedup = function(str) {
@@ -79,3 +84,5 @@ module.exports = {
   truncateLongItems: truncateLongItems,
   truncateString: truncateString
 };
+
+console.log(countChars('mississippi'))
