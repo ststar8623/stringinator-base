@@ -2,14 +2,12 @@ const _ = require('./underbar');
 
 const first = function(str, n = 1) {
   // Your code goes here
-  const arr = str.split('');
-  return n === 1 ? arr[0] : arr.splice(0, n).join('');
+  return n === 1 ? str[0] : str.slice(0, n);
 };
 
 const last = function(str, n = 1) {
   // Your code goes here
-  const arr = str.split('');
-  return n === 1 ? arr[arr.length -1] : arr.splice(Math.max(0, arr.length - n)).join('');
+  return n === 1 ? str[str.length -1] : str.slice(Math.max(0, str.length - n));
 };
 
 const removeChar = function(str, target) {
