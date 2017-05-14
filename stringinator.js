@@ -2,38 +2,34 @@ const _ = require('./underbar');
 
 const first = function(str, n = 1) {
   // Your code goes here
-  return n === 1 ? str[0] : str.slice(0, n);
+  return _.first(str, n);
 };
 
 const last = function(str, n = 1) {
   // Your code goes here
-  return n === 1 ? str[str.length -1] : str.slice(Math.max(0, str.length - n));
+  return _.last(str, n);
 };
 
 const removeChar = function(str, target) {
   // hint: use _.reject
   // Your code goes here
-  const arr = str.split('');
-  return _.reject(arr, letter => letter === target).join('');
+  return _.reject(str, letter => letter === target).join('');
 };
 
 const hasChar = function(str, target) {
   // hint: use _.some
   // Your code goes here
-  const arr = str.split('');
-  return _.some(arr, letter => letter === target);
+  return _.some(str, letter => letter === target);
 };
 
 const isOnlyDigits = function(str) {
   // Your code goes here
-  const arr = str.split('');
-  return _.every(arr, char => char.charCodeAt(0) >= 48 && char.charCodeAt(0) <= 57);
+  return _.every(str, char => !isNaN(parseInt(char, 10));
 };
 
 const filterToOnlyDigits = function(str) {
   // Your code goes here
-  const arr = str.split('');
-  return _.filter(arr, num => Number(num)).join('');
+  return _.filter(str, num => !isNaN(parseInt(num, 10)).join('');
 };
 
 const truncateString = function(val, maxLength) {
@@ -44,16 +40,11 @@ const truncateString = function(val, maxLength) {
 const truncateLongItems = function(obj, maxLength) {
   // hint: use truncateString above
   // Your code goes here
-  const result = [];
-  for(let key in obj){
-    result.push(truncateString(obj[key], maxLength));
-  };
-  return result;
+  return _.map(obj, item => truncateString(item, maxLength));
 };
 
 const countChars = function(str) {
   // Your code goes here
-  const arr = str.split('');
   return _.reduce(str, (obj, currentValue)=>{
     obj[currentValue] === undefined ? obj[currentValue] = 1 : obj[currentValue]++;
     return obj;
