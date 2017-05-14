@@ -24,12 +24,12 @@ const hasChar = function(str, target) {
 
 const isOnlyDigits = function(str) {
   // Your code goes here
-  return _.every(str, char => !isNaN(parseInt(char, 10));
+  return _.every(str, char => !isNaN(parseInt(char, 10)));
 };
 
 const filterToOnlyDigits = function(str) {
   // Your code goes here
-  return _.filter(str, num => !isNaN(parseInt(num, 10)).join('');
+  return _.filter(str, num => !isNaN(parseInt(num, 10))).join('');
 };
 
 const truncateString = function(val, maxLength) {
@@ -68,5 +68,3 @@ module.exports = {
   truncateLongItems: truncateLongItems,
   truncateString: truncateString
 };
-
-console.log(countChars('mississippi'))
